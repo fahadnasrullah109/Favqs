@@ -1,5 +1,5 @@
 
-# Assignment NewStore Android
+# Favqs Android App
 
 The repository contains Assignment from NewStore. Code implemented in  MVVM - Clean architecture in Kotlin.
 
