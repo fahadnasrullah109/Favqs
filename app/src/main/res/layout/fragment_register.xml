@@ -5,7 +5,7 @@
     android:background="#FFFFFF">
 
     <TextView
-        android:id="@+id/login_text_view"
+        android:id="@+id/register_text_view"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:background="@color/purple_700"
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_text_view">
+        app:layout_constraintTop_toBottomOf="@+id/register_text_view">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
