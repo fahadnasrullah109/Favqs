@@ -2,9 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/quoteFragment"
         android:title="@string/home"
+        android:contentDescription="@string/home"
         android:icon="@drawable/ic_home"/>
 
     <item android:id="@+id/quoteListingFragment"
         android:title="@string/listing"
+        android:contentDescription="@string/listing"
         android:icon="@drawable/ic_list"/>
 </menu>

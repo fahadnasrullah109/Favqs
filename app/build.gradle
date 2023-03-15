@@ -17,6 +17,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // Added this for Instrumentation testing to start each test with cleared data
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+
+    }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
     }
 
     buildTypes {
@@ -79,19 +86,15 @@ dependencies {
     // RecyclerView
     implementation "androidx.recyclerview:recyclerview:$recylcerview_version"
 
-    debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
     testImplementation "junit:junit:$junit_version"
     testImplementation "android.arch.core:core-testing:$core_testing_version"
-    testImplementation "androidx.arch.core:core-testing:$arch_testing_version"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
     testImplementation "io.mockk:mockk:$mockk_version"
-    testImplementation "com.squareup.okhttp3:mockwebserver:$okhttp_version"
+
+
     androidTestImplementation "androidx.test.ext:junit:$android_test_ext_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
-    androidTestImplementation "io.mockk:mockk-android:$mockk_version"
-}
-
-// Allow references to generated code
-kapt {
-    correctErrorTypes = true
+    androidTestImplementation "androidx.test:core-ktx:$core_testing_version"
+    androidTestImplementation "androidx.test:runner:$runner_version"
+    androidTestUtil 'androidx.test:orchestrator:1.4.2'
 }
